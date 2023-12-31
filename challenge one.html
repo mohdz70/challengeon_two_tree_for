@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>challenge One</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+
+    <p>Call a function which performs a calculation and returns the result:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let message = "There is no war in Ba Sing Se";
+      let x = message.length;
+      document.getElementById("demo").innerHTML = x;
+
+      let countries = ["China", "Japan", "South Korea", "Vietnam", "Malaysia"];
+      let capital = ["Beijing", "Tokyo", "Seoul", "Hanoï", "Kuala Lumpur"];
+      console.log(capital[4]);
+      countries.forEach((element) => {
+        console.log(
+          "Your country :" +
+            element +
+            " COUNTRY has the capital named : " +
+            capital[countries.indexOf(element)]
+        );
+      });
+      let randomizeur = Math.floor(Math.random() * 3);
+      if (randomizeur == 0) {
+        console.log("A certain victory");
+      } else if (randomizeur == 1) {
+        console.log("not so certain victory");
+      } else if (randomizeur == 2) {
+        console.log("an uneasy victory");
+      } else {
+        console.log("Your fate is unclear, ô chosen undead");
+      }
+      let Lemois = window.prompt("Donner Le N° Mois : ?");
+      checkSeason(Lemois);
+
+      function checkSeason(xx) {
+        if (xx === 1) {
+          return console.log("Winter");
+        } else if (xx === 2) {
+          return console.log("Spring");
+        }
+      }
+    </script>
+  </body>
+</html>
